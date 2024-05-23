@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SearchApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <nav class="flex items-center justify-between flex-wrap bg-primary py-3 px-6 fixed w-full z-10 top-0">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <%= link_to root_url, class: "text-white no-underline hover:text-white hover:no-underline" do %>
+          <span class="text-3xl pl-2">Helpjuice Test Project</span>
+        <% end %>
+      </div>
+
+      <div class="w-full flex-grow flex items-center w-auto block pt-0" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <%= link_to "Search", root_url, class: request.path == queries_path ? "inline-block text-black no-underline hover:text-gray-200 hover:text-underline py-2 px-4" : "inline-block py-2 px-4 text-xl text-white no-underline" %>
+          </li>
+          <li class="mr-3">
+            <%= link_to "Search History", queries_path, class: request.path == queries_path ? "inline-block py-2 px-4 text-xl text-white no-underline" : "inline-block text-black no-underline hover:text-gray-200 hover:text-underline py-2 px-4" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<%= form_with model: @query, class: "w-full" do |form| %>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <%= form.label :search_term, "Search Term", class: "hidden" %>
+    <%= form.text_field :search_term, class: "block center w-10/12 rounded-l-lg appearance-none leading-8 text-5xl" %>
+    <%= form.submit "Search", class: "w-2/12 rounded-r-lg bg-primary hover:bg-highlight text-white text-3xl font-bold py-2 px-4" %>
+  </div>
+<% end %>
