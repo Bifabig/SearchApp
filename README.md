@@ -50,7 +50,7 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.sqlite.org/">SQLite</a></li>
+    <li><a href="https://www.postgres.org/">Postgres</a></li>
   </ul>
 </details>
 
@@ -89,7 +89,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/Bifabig/searchapp.git
+  git clone https://github.com/Bifabig/SearchApp.git
 ```
 
 ### Install
