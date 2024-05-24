@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Query.create(search_term: "What is the name of the Rails framework?")
+Query.create(search_term: "How do I create a new Rails application?")
