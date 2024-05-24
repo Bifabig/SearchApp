@@ -1,12 +1,12 @@
 databases:
-  - name: search-app
-    databaseName: search-app
-    user: search-app
+  - name: SearchApp
+    databaseName: SearchApp
+    user: SearchApp
     plan: free
 
 services:
   - type: web
-    name: search-app
+    name: SearchApp
     runtime: ruby
     plan: free
     buildCommand: './bin/render-build.sh'
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: search-app
+          name: SearchApp
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
