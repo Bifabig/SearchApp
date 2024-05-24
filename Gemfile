@@ -79,6 +79,7 @@ group :test do
   gem "selenium-webdriver"
   gem "n_plus_one_control"
   gem "webdrivers"
+  gem "rspec-rails"
 
 end
 
